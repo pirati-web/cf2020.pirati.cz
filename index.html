@@ -1,0 +1,879 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Michal Najvárek, Česká pirátská strana" />
+    <meta name="description" content="Zasedání Celostátního fóra Pirátské strany 2020, OSTRAVA" />
+    <meta name="keywords" content="pirati,zasedani,forum,ostrava, cf2020" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+
+    <title>Zasedání Celostátního fóra Pirátské strany 2020, OSTRAVA</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen,projection" />
+    <link href="favicon.ico" rel="icon" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+
+      $(window).scroll(function(){
+          if ($(this).scrollTop() > 50) {
+              $('#scroll').fadeIn();
+              $('#scroll').css("display", "block");
+          } else {
+              $('#scroll').fadeOut();
+              $('#scroll').css("display", "none");
+          }
+      });
+    </script>
+
+
+    <script>
+    // Set the date we're counting down to
+    //var countDownDate = new Date("Jan 11, 2020 10:00:00").getTime();
+
+    // Update the count down every 1 second
+    //var x = setInterval(function() {
+
+      // Get todays date and time
+      //var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      //var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      // Display the result in the element with id="demo"
+      //document.getElementById("countdown").innerHTML = "Proběhne v Ostravě už za " + days + " dní!";
+
+      // If the count down is finished, write some text
+      //  if (distance < 0) {
+      //    clearInterval(x);
+      //    document.getElementById("countdown").innerHTML = "MULTIFUNKČNÍ AULA GONG, DOLNÍ VÍTKOVICE, OSTRAVA";
+      //  }
+      //}, 1000);
+    </script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+  </head>
+
+  <body>
+    <a id="scroll" href="#topGraphic"><img src="images/backtotop.png" alt="back to top" /></a>
+
+    <div id="topGraphic">
+      <div class="whiteCover"></div>
+      <div class="logoContainer"><img src="images/splash.png" alt="" class="logo" /></div>
+
+      <div id="buttonUnderLogo" class="content">
+        <p></p>
+        <a href="#about"><img src="images/arrow.gif" alt="Posuň stránku níž" /></a>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="content">
+        <h1>Celostátní fórum</h1>
+        <p>
+          Celostátní fórum Pirátské strany je nejvyšším orgánem strany a zasedání se podle možností účastní každý člen strany.<br />
+          <br />
+          Celostátní fórum ve výlučné působnosti
+          <ul>
+            <li>volí a odvolává republikové předsednictvo, volené členy republikového výboru, členy komisí a vedoucí odborů,</li>
+            <li>zřizuje a ruší komise a odbory a schvaluje změny stanov,</li>
+            <li>projednává a schvaluje výroční zprávu předsedy strany, výroční finanční zprávu,</li>
+            <li>mimořádně přezkoumává pravomocné rozhodnutí jiného orgánu strany.</li>
+          </ul>
+          <div class="textRight smallerText italic"><a href="https://wiki.pirati.cz/cf">zdroj</a></div>
+        </p>
+      </div>
+    </div>
+
+    <div id="info">
+      <div class="whiteCover"></div>
+      <div class="content">
+        <h1 class="textCenter">Informace k zasedání 10.-11. ledna 2020</h1>
+        <!--<h2 class="textCenter" id="countdown"></h2>-->
+
+        <a id="block_registrace" href="?p=registrace#info" onclick="javascript:$('#registrace').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <span>
+              Co po registraci?
+            </span>
+          </div>
+        </a>
+
+        <a id="block_zapojSe" href="?p=zapojSe#info" onclick="javascript:$('#zapojse').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <span>
+              Zapoj se (dobrovolníci)
+            </span>
+          </div>
+        </a>
+
+        <a id="block_preParty" href="?p=preParty#info" onclick="javascript:$('#preparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <span>
+              Páteční<br />večírek
+            </span>
+          </div>
+        </a>
+
+        <a id="block_ubytovani" href="?p=ubytovani#info" onclick="javascript:$('#ubytovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <span>
+              Kde přespím?
+            </span>
+          </div>
+        </a>
+
+        <a id="block_jakNaMisto" href="?p=jakNaMisto#info" onclick="javascript:$('#mapa').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <span>
+              Jak se dostanu<br />na místo?
+            </span>
+          </div>
+        </a>
+
+        <a id="block_program" href="?p=program#info" onclick="javascript:$('#program').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <span>
+              Program zasedání
+            </span>
+          </div>
+        </a>
+
+        <a id="block_stream" href="?p=stream#info" onclick="javascript:$('#stream').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <!--
+            <span class="textBlink">
+            -->
+            <span>
+              Živý přenos
+            </span>
+          </div>
+        </a>
+
+        <a id="block_stravovani" href="?p=stravovani#info" onclick="javascript:$('#stravovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <span>
+              Kde se najím?
+            </span>
+          </div>
+        </a>
+
+        <a id="block_media" href="?p=media#info" onclick="javascript:$('#media').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <span>
+              Pro média
+            </span>
+          </div>
+        </a>
+
+        <a id="block_afterParty" href="?p=afterParty#info" onclick="javascript:$('#afterparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div>
+            <span>
+              Sobotní<br />večírek
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="content">
+        <a href="https://pirati.cz/"><img src="images/logo-pirati.png" alt="Pirátská strana - logo" /></a>
+
+        <div class="floatRight">
+          <span class="copyleft">©</span>2017 <a href="https://pirati.cz/">Česká pirátská strana</a> - všechna práva vyhlazena<br />
+          <br />
+          zveřejněno pod licencí <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="external">Creative Commons</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- popup windows -->
+    <div id="registrace" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Co po registraci?</h1>
+          <p>
+            Pokud jste zaregistrován přes formulář,
+            pak si ráno před zasedáním vyzvednete svou jmenovku a další informace,
+            které jsou pro vás připraveny pěkně pohromadě.<br />
+            <br />
+            Nestihl/a jste se zaregistrovat a jste člen strany? Nevadí, i na to jsme připraveni!
+            Stačí přijít k pultíku, kde si registrovaní vyzvedávají jmenovky a zde se o vás postaráme.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="zapojse" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Zapoj se jako dobrovolník</h1>
+
+          <h2>Kam se nahlásit</h2>
+          <p>
+            Vyplň <a href="https://ec.europa.eu/eusurvey/runner/6879c7c2-35cb-64b4-22e4-07a7da1dd0bf" rel="external">registrační formulář dobrovolníka</a> a my se Ti ozveme s bližšími informacemi. V případě jakýchkoliv dotazů ohledně tvé pomoci kontaktuj <a href="https://forum.pirati.cz/dvaidx-u11635/">Davida O.</a> (tel. 604221773, <a href="mailto:david@otoupalik.cz">david@otoupalik.cz</a>).
+          </p>
+
+          <h2>Koho hledáme</h2>
+          <p>
+            <ul>
+              <li>cca 5 dobrovolníků na registrační místo | sobota 8:00 až do doby potřebné k akreditaci členů</li>
+              <li>cca 2-4 dobrovolníky k zajištění dalších potřebných věcí (příprava prostor, běžná agenda) | sobota i neděle</li>
+              <li>cca 2-3 dobrovolníky k technice, která bude zajišťovat on-line streaming (předpokládáme technické zkušenosti) | sobota i neděle</li>
+            </ul>
+           </p>
+          </p>
+
+          <h2>Musím být k dispozici po celou dobu?</h2>
+          <p>
+            Ne. Budeme rádi za každou pomoc. Největší nápor bude mezi 8:30 až 10:00 v sobotu na registraci. Pak už to zvládneme v menším počtu. Během dne určitě zvládneš pokec s kamarády nebo známými, tak aby sis CF 2018 taky mohl(a) užít.<br />
+          </p>
+
+          <h2>Co za to získám?</h2>
+          <p>
+            Peníze nenabízíme. Získáš dobrý pocit, skvělý zážitek, spoustu nových kontaktů a pirátské body. Vhodné také pro zájemce, kteří jsou čekatelé na členství u Pirátů a nebo o tom teprve uvažují. <a href="https://ec.europa.eu/eusurvey/runner/6879c7c2-35cb-64b4-22e4-07a7da1dd0bf" rel="external">Registruj se jako dobrovolník</a> a užij si CF 2018 z první řady.<br />
+          </p>
+
+          <h2>Adresa jednacího sálu</h2>
+          <p>
+            Hotel Palcát<br />
+            9. května<br />
+            Tábor
+          </p>
+          <div class="iframe">
+            <div id="mapa-zapojse" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+            <a href="https://www.openstreetmap.org/?mlat=49.18549&amp;mlon=16.58540#map=19/49.18549/16.58540" class="smallerText" rel="external">Zobrazit velkou mapu</a><br />&nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="preparty" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">PreParty</h1>
+          <div class="iframe">
+            <div id="mapa-preparty" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+          </div>
+
+          <p>
+            Místo: Zahrada Ambrosia, Údolní 37, Brno<br />
+            Kdy: v pátek 6.1.2018 od 19:00 do 00:00
+          </p>
+
+          <p>
+            Kavárnu máme rezervovanou celou, avšak její kapacitu ještě navýšíme, jelikož přímo pod ní se nachází Pirate Space Brno - základna brněnských Pirátů. V ní najde útočiště každý, jemuž nevadí kouř či nějaké ty škodlivé emise.
+          </p>
+
+          <h2>Jak se dostanu na večírek?</h2>
+          <p>
+            Šalinou č. 4 směr Náměstí Míru a vystoupíte na zastávce <b>Obilní trh</b>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="ubytovani" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Kde přespím?</h1>
+          <p>
+            Veškeré ubytování si zajišťují účastníci CF sami a na své náklady.
+            Nabízet a poptávat couchsurfing je možné přes <a href="http://bit.ly/2zQkTZd">tento formulář</a>.
+          </p>
+
+          <p>
+            Máme rezervovaných 49 lůžek v <a href="http://hostelfleda.com/cz/uvod/" rel="external">
+              hostelu Fléda</a> (místo konání afterparty) a 50 lůžek v <a href="http://www.hosteleleven.com/cz" rel="external">hostelu Eleven</a> (centrum Brna). Pokoje mají sdílené soc. zázemí a kuchyňky. Jedná se o 2 až 6ti lůžkové pokoje. V obou hostelech je domluvená jednotná zvýhodněná cena 270 Kč/os/noc, včetně všech poplatků.
+          </p>
+
+          <p>
+            Pokud máte zájem o ubytování v jednom z hostelů,
+            zapište se do <a href="https://docs.google.com/spreadsheets/d/1FQGgleQntOROauVvkKT8YW4xrpF7UEYrnUzQqQeE1Ck/edit?usp=sharing">této online tabulky</a> <span class="smallestText">(odkaz vede na nesvobodnou službu)</span> (každý hostel má svůj list), následně vám na e-mail přijde potvrzení rezervace se všemi podrobnostmi.
+          </p>
+
+          <h2>Jak se dostanu do hostelu Fléda</h2>
+          <div class="iframe">
+            <div id="mapa-fleda" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+          </div>
+          <p>
+            <h3>Přijedu autem</h3>
+            zadejte do navigace Štefaníkova 24. Parkování v okolí hostelu.<br />
+            <h3>Přijedu autobusem</h3>
+            z ústředního autobusového nádraží se vydejte do OC Vaňkovka, tím projděte a dostanete se k Tesco. Pokračujte stále rovně do podchodu, ze kterého vystupte k tramvajím směr Řečkovice. Dále tramvaji č. 1 směr Řečkovice, zastávka Hrnčířská.<br />
+            <h3>Přijedu žlutým nebo zeleným autobusem</h3>
+            Z autobusového nádraží Grand se otočte směrem na silnici s kolejemi pro MHD. Běžte doleva podél této silnice a dojdete k vlakovému nádraží. Dále viz „přijedu vlakem“.<br />
+            <h3>Přijedu vlakem</h3>
+            z hl. nádraží tramvaj č. 1 směr Řečkovice, zastávka Hrnčířská.
+          </p>
+
+          <p>
+            Na místo konání CF 2018 jeďte tramvaji č. 4 na Mendlovo nám. Přestupte na autobus č. 84 vystupte na zastávce Křížkovského a pokračujte ve stejném směru pěšky cca 100 m. Po levé straně se nachází hotel Voroněž.
+          </p>
+
+          <h2>Jak se dostanu do hostelu Eleven (Dominikánska 11, přístup až k hostelu pouze pěšky)</h2>
+          <div class="iframe">
+            <div id="mapa-eleven" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+          </div>
+          <p>
+            <h3>Přijedu autem</h3>
+            zadejte do navigace ul. Husova a zaparkujte v jejím okolí nebo v placeném parkovacím domě Domini park – vjezd vedle hotelu International. Dále pěšky cca 5 min.. K hostelu se autem dostat nedá.<br />
+            <h3>Přijedu vlakem</h3>
+            pěšky směr centrum cca 10 min. nebo tramvaji č. 4 a 12 do zastávky Šilingrovo nám. A dále pěšky cca 3 min. doprava od směru jízdy tramvaje.<br />
+            <h3>Přijedu autobusem</h3>
+            z ústředního autobusového nádraží se vydejte do OC Vaňkovka, tím projděte a dostanete se k Tesco. Pokračujte stále rovně do podchodu, ze kterého vystupte k tramvajím. Dále viz. „přijedu vlakem“.<br />
+            <h3>Přijedu žlutým nebo zeleným autobusem</h3>
+            Z autobusového nádraží Grand se otočte směrem na silnici s kolejemi pro MHD. Běžte doleva podél této silnice a dojdete k vlakovému nádraží. Dále viz „přijedu vlakem“.
+          </p>
+
+          <p>
+            Na místo konání CF 2018 jeďte tramvaji č. 6 z Šilingrového nám. na Mendlovo nám. Přestupte na autobus č. 84, vystupte na zastávce Křížkovského a pokračujte ve stejném směru pěšky cca 100 m. Po levé straně se nachází hotel Voroněž.
+          </p>
+
+          <h2>Ubytování v místě konání CF</h2>
+          <p>
+            <a href="http://www.oreahotelvoronez.cz/cz/rezervace/" rel="external">Orea Hotel Voroněž</a> – od 1.300 Kč za 2-lůžkový pokoj a noc
+          </p>
+
+          <p>
+            Dalších možností ubytování je v Táboře spousta, výběr je na vás.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="mapa" class="popup">
+      <div class="inner" onclick="javascript:null;">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Jak se dostanu na místo?</h1>
+
+          <h2>Adresa jednacího sálu</h2>
+          <p>
+            Hotel Palcát<br />
+            9. května<br />
+            Tábor
+          </p>
+          <div class="iframe">
+            <div id="mapa-zasedani" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+            <a href="https://www.openstreetmap.org/?mlat=49.18549&amp;mlon=16.58540#map=19/49.18549/16.58540" class="smallerText" rel="external">Zobrazit velkou mapu</a>
+          </div>
+
+          <h2>Přijedu autem</h2>
+          <p>
+            Do navigace zadejte výše uvedenou adresu a zaparkujte na parkovišti přímo u hotelu.
+          </p>
+
+          <h2>Přijedu autobusem</h2>
+          <p>
+            Na Ústředním autobusovém nádraží se otočte čelem k nástupištnímu označníku a tímto směrem přejděte na protější chodník, po kterém běžte doprava k přechodu přes silnici. Přejděte přes ni směrem ke vchodu do nákupního centra Vaňkovka, poté se otočte doleva a přejděte silnici znovu. Dojděte na zastávku autobusu a nastupte do okružní linky č. 84.
+            Před nástupem do vozu si pořiďte jízdenku (viz níže, cesta na zasedání trvá do 20 minut).<br />
+            Vystupte na zastávce <b>Křížkovského</b> a pokračujte ve stejném směru pěšky cca 100 m. Po levé straně se nachází hotel Voroněž.<br />
+            <a href="https://www.google.cz/maps/dir/Brno+%C3%9AAN+Zvona%C5%99ka,+Brno-Brno-st%C5%99ed/Orea+Hotel+Voron%C4%9B%C5%BE,+K%C5%99%C3%AD%C5%BEkovsk%C3%A9ho+458,+Brno/@49.1878729,16.5919366,15z/am=t/data=!4m18!4m17!1m5!1m1!1s0x471294fe156c75b9:0x249378ee9740e62b!2m2!1d16.6166616!2d49.1858157!1m5!1m1!1s0x471295b5b300c387:0x4146a6531d3b40d3!2m2!1d16.585073!2d49.185861!2m3!6e1!7e2!8j1515231000!3e3" class="smallerText" rel="external">Zobrazit mapu trasy</a> <span class="smallestText">(odkaz vede na nesvobodné mapy)</span>
+          </p>
+
+          <h2>Přijedu žlutým nebo zeleným autobusem</h2>
+          <p>
+            Z autobusového nádraží Grand se otočte směrem na silnici s kolejemi pro MHD. Běžte doleva podél této silnice a dojdete k vlakovému nádraží.<br />
+            <i>Dále viz „přijedu vlakem“.</i>
+          </p>
+
+          <h2>Přijedu vlakem</h2>
+          <p>
+            Vyjděte z vlakového nádraží a uvidíte 4 koleje šalin MHD. Jsou značené, tudíž běžte na 1. kolej.<br />
+            Před nástupem do vozu si pořiďte jízdenku (viz níže, cesta na zasedání trvá asi 10 minut) a nastupte na šalinu č. 1 směr Bystrc Ečerova, která vás doveze na zastávku <b>Výstaviště - hlavní vstup</b>.<br />
+            Zde vystupte, přejděte přes koleje a sejděte schody. Běžte kolem hlavního vchodu na Výstaviště směrem k benzinové pumpě a poté se vydejte doprava kolem zastávky autobusu po chodníku podél silnice. Po cca 100 m se po levé straně nachází hotel Voroněž.<br />
+            <a href="https://www.google.cz/maps/dir/Brno+hlavn%C3%AD+n%C3%A1dra%C5%BE%C3%AD,+602+00+Brno-st%C5%99ed/Orea+Hotel+Voron%C4%9B%C5%BE,+K%C5%99%C3%AD%C5%BEkovsk%C3%A9ho+458,+Brno/@49.1882186,16.5909254,15z/am=t/data=!4m18!4m17!1m5!1m1!1s0x471294560dd4bed9:0x5083d9286244b320!2m2!1d16.6126478!2d49.1908371!1m5!1m1!1s0x471295b5b300c387:0x4146a6531d3b40d3!2m2!1d16.585073!2d49.185861!2m3!6e1!7e2!8j1515231000!3e3" class="smallerText" rel="external">Zobrazit mapu trasy</a> <span class="smallestText">(odkaz vede na nesvobodné mapy)</span>
+          </p>
+
+          <h2>Noční doprava po Brně</h2>
+          <p>
+            V Brně jsou noční linky řešeny tzv. rozjezdy. Pokud je noc před nepracovním dnem (z pátku na sobotu, ze soboty na neděli), tak od 23:00 do 5:00 jezdí noční linky každou půlhodinu. Pokud vidíte jet rozjezd před „půl“ nebo „celou“, mělo by jít o autobus jedoucí přes hlavní nádraží, kde se všechny linky sjíždí a mají společný odjezd právě o půl či v celou. Rozjezdem se dá přejet celé město za méně než půl hodiny.
+          </p>
+
+          <h2>Jízdenky MHD</h2>
+            <h3>SMS jízdenky</h3>
+            Na telefonní číslo <b>90206</b> zašlete text:
+            <ul>
+              <li><b>TÁBOR20</b> (pro jízdenku na 20 minut, 20 Kč)</li>
+              <li><b>TÁBOR</b> (pro jízdenku na 75 minut, 29 Kč)</li>
+              <li><b>TÁBORD</b> (pro jízdenku na 24 hodin, 99 Kč)</li>
+            </ul>
+            <h3>Papírové jízdenky</h3>
+            Pokud nechcete nebo nemůžete pořizovat SMS jízdenky, použijte pro nákup buď žluté automaty (na většině zastávek) nebo trafiky.
+            <ul>
+              <li>15 minutová jízdenka stojí 20 Kč</li>
+              <li>60 minutová jízdenka stojí 25 Kč</li>
+              <li>24 hodin jízdenka stojí 90 Kč a o víkendu na ni mohou jet až 2 dospělí a 3 děti</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="program" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Program zasedání</h1>
+
+          <p>
+            <h2>Sobota:</h2>
+            A 10.00-11.00 - Zahájení; Projevy kandidátů na předsedu strany, otázky<br /><br />
+            B 11.00-12.00 - 1. kolo volby předsedy (hlasování); Změny stanov 1 (rozprava)<br /><br />
+            C 12.00-13.00 - Vyhlášení výsledků 1. kola volby předsedy (v případě jediného kandidáta bude hlasování pokračovat až do 13.00), případné 2. kolo volby předsedy (hlasování); Oběd<br /><br />
+            D 13.00-14.00 - Vyhlášení výsledků volby předsedy; Projevy kandidátů na místopředsedy, otázky<br /><br />
+            E 14.00-15.00 - Pokračování rozpravy k volbě místopředsedů<br /><br />
+            F 15.00-16.00 - 1 kolo volby místopředsedů (hlasování); Změny stanov 2 (rozprava)<br /><br />
+            G 16.00-17.00 - Vyhlášení výsledků 1. kola volby místopředsedů, 2. kolo volby místopředsedů (hlasování); 1. kolo hlasování o změnách stanov; Informace o senátních volbách 2018; Zpráva předsedy o stavu strany<br /><br />
+            H 17.00-18.00 - Vyhlášení výsledků volby místopředsedů; případné 2. kolo hlasování o změnách stanov; projednání principů důležitých pro upgrade strany (zejména pozice vedoucích odborů - politická garance vs. zaměstnávání a servisně-administrativní funkce), jejich případné doplnění (schvalování po zasedáníi online) - projednání pomocí participativních nástrojů (např. lístečkování); debata o dosavadním upgradu, organizačním schématu strany, pozici a podpoře odborných garantů a jejich spolupráci s poslanci zodpovědnými za danou problematiku ve sněmovně a celou pracovní skupinou a 2) zadání výběrového řízení - probrání výsledné vize pro upgrade, hlasování opět po zasedání online + nastavení skupin a workshopů na neděli (Olga)<br />
+
+            <h2>Neděle:</h2>
+            workshopy viz pad <a href="https://pad.pirati.cz/p/cf2018nedele">https://pad.pirati.cz/p/cf2018nedele</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="stream" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Živý přenos</h1>
+          <div class="textCenter">
+            <!--<iframe src="https://www.youtube-nocookie.com/embed/3LfFG84fgdk?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            -->
+            <img src="images/working.png" alt="Děláme na tom!" />
+            <p>
+              Informace doplníme co nejdříve.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="stravovani" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Kde se najím?</h1>
+            <h2>Do 10 min chůze</h2>
+              <div id="mapa-10min" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+
+              <h3><a href="http://www.oreahotelvoronez.cz/cz/restaurace/">Hotel Voroněž</a></h3>
+              <h4>Gril bar Gurmet  +  A La Carte Restaurant</h4>
+              </a>
+              <ul>
+                <li>Křížkovského 47, Brno</li>
+                <li>Typy kuchyně: česká a středomořská</li>
+                <li>Cena pro dva: 600 Kč</li>
+                <li>Otevírací doba: 09:00 - 23:00 (Po-Ne)</li>
+                <li class="italic">Patrikovo nej - NEJbližší, 2 restaurace</li>
+              </ul>
+
+              <h3><a href="http://www.fairhotel.cz/restaurace">FairCafe Restaurant</a></h3>
+              <ul>
+                <li>Rybářská 202/19, Brno</li>
+                <li>Typy kuchyně: česká</li>
+                <li>Cena pro dva: 800 Kč</li>
+                <li>Otevírací doba: 11:00 - 22:00 (Po, Ne), 11:00 - 23:00 (Út-So)</li>
+                <li class="italic">Patrikovo nej - NEJlepší (nejen podle mě), jedna z recenzí:<br />
+                <span class="smallerText">„Faircafé je restaurace v nově postaveném hotelu. I přes název nabízí špičkovou kuchyni, kde nápaditá sezónní (odlehčená rakousko-uherská) nabídka je každý týden doplněna ještě menu za poměrně běžné ceny, za které ale návštěvník dostane špičkovou, hezky servírovanou, gastronomii. Faircafé se konceptem blíží asi nejvíc Forhausu, míň výhodná poloha znamená nižší ceny a v Brně jeden z nejlepších poměrů cena/výkon ve vyšší třídě.“</span></li>
+              </ul>
+
+              <h3><a href="https://www.zomato.com/cs/brno/u-kajmana-pis%C3%A1rky-brno-st%C5%99ed/menu">U Kajmana</a></h3>
+              <ul>
+                <li>Křížkovského 33a, Brno</li>
+                <li>Typy kuchyně: česká</li>
+                <li>Cena pro dva: 420 Kč</li>
+                <li>Otevírací doba: 11:00 - 22:00 (Po-So),Zavřeno (Ne)</li>
+                <li class="italic">Patrikovo nej - NEJklasičtější, v dobrém i zlém :) a nejlevnější</li>
+              </ul>
+
+              <h3><a href="http://www.satyam.cz/">Satyam</a></h3>
+              <ul>
+                <li>Křížkovského 33, Brno</li>
+                <li>Typy kuchyně: Indická</li>
+                <li>Cena pro dva: 550 Kč</li>
+                <li>Otevírací doba: 11:00 - 23:00 (Po-So),12:00 - 22:00 (Ne)</li>
+                <li class="italic">Patrikovo nej - NEJspíš tady jde o víkendu sehnat vegetariánské jídlo</li>
+              </ul>
+
+              <h3><a href="https://www.zomato.com/cs/brno/buffalo-american-steakhouse-pis%C3%A1rky-brno-st%C5%99ed/denn%C3%AD-menu">Buffalo American Steakhouse</a></h3>
+              <ul>
+                <li>Křížkovského 416/22, Brno</li>
+                <li>Typy kuchyně: stakhouse</li>
+                <li>Cena pro dva: 600 Kč</li>
+                <li>Otevírací doba: 11:00 - 23:00 (Po-Čt),11:00 - 24:00 (Pá-So),12:00 - 24:00 (Ne)</li>
+                <li class="italic">Patrikovo nej - NEJ pro stejkaře, super poměr kvalita cena</li>
+              </ul>
+
+              <h3><a href="http://www.prominent-restaurant.cz/">Prominent</a></h3>
+              <ul>
+                <li>Křížkovského 20, Brno</li>
+                <li>Typy kuchyně: česká</li>
+                <li>Cena pro dva: 1600 Kč</li>
+                <li>Otevírací doba: 11:00 - 24:00 (Po-Ne)</li>
+                <li class="italic">Patrikovo nej - NEJluxuxsnější</li>
+              </ul>
+
+            <h2>Do 15 min chůze</h2>
+              <div id="mapa-15min" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+
+              <h3><a href="http://www.zeleznaruze.cz/">Pivní a vinný šenk Železná růže</a></h3>
+              <ul>
+                <li>Hlinky 48, Staré Brno, Brno střed</li>
+                <li>Typy kuchyně: česká</li>
+                <li>Cena pro dva: 650 Kč</li>
+                <li>Otevírací doba: 11:00 - 24:00 (Po-So),11:00 - 22:00 (Ne)</li>
+                <li class="italic">Patrikovo nej - NEJbrněnštější, středověký sklep, dobré jídlo a pivo, majitel je syn Franty Kocourka a kamarád</li>
+              </ul>
+
+              <h3><a href="http://www.mitrovski.cz/">Restaurant MITROVSKI</a></h3>
+              <ul>
+                <li>Veletržní 13, Staré Brno, Brno střed</li>
+                <li>Typy kuchyně: česká+slovenská</li>
+                <li>Cena pro dva: 650 Kč</li>
+                <li>Otevírací doba: 10:00 - 22:00 (Po-So),12:00 - 20:00 (Ne)</li>
+              </ul>
+
+            <h2>Do 20 minut chůze</h2>
+              <div id="mapa-20min" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+
+              <h3><a href="http://pivovarskastarobrno.cz/">Pivovarská Starobrno</a></h3>
+              <ul>
+                <li>Mendlovo náměstí 20</li>
+                <li>Typy kuchyně: česká + steakhouse+grill</li>
+                <li>Cena pro dva: 790 Kč</li>
+                <li>Otevírací doba: 11:00 - 24:00 (Po-St),11:00 - 01:00 (Čt-Pá),11:30 - 01:00 (So-Ne)</li>
+                <li class="italic">Patrikovo nej - NEJuniverzálnější, 2 restaurace v 1 – levnější pivnice a lepší na jídlo</li>
+              </ul>
+
+              <h3><a href="http://www.sharingham.cz/">Sharingham</a></h3>
+              <ul>
+                <li>Vídeňská 1</li>
+                <li>Typy kuchyně: česká a pizza</li>
+                <li>Cena pro dva: 450 Kč</li>
+                <li>Otevírací doba: 11:30 - 23:30 (Po-Ne)</li>
+              </ul>
+
+              <h3><a href="http://duckbar.cz/">Kamenka, Duck bar</a></h3>
+              <ul>
+                <li>Kamenná čtvrť 10c</li>
+                <li>Otevírací doba: 17.00 – 02.00 (Po-Ne)</li>
+                <li class="italic">Patrikovo nej - NEJatmoška</li>
+              </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="media" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Pro média</h1>
+          <p>
+            V případě zájmu o účast na zasedání Celostátního fóra Pirátské strany, které se uskuteční v lednu 2018 v Brně, je nutné provést akreditaci, a to <b>nejpozději do 3. 1. 2018 18:00</b>. Bez ní nebude vstup umožněn.
+          </p>
+
+          <p>
+
+            <h3>Akreditace</h3>
+            Jakub Dušánek<br />
+            <a href="mailto:jakub.dusanek@pirati.cz">jakub.dusanek@pirati.cz</a><br />
+            +420 770 138 763
+
+            <h3>Kontakt v Brně, technické obhlídky místa</h3>
+            Miroslav Bárta<br />
+            <a href="mailto:miroslav.barta@pirati.cz">miroslav.barta@pirati.cz</a><br />
+            +420 730 896 278
+
+            <h3>Kontaktní osoba pro média na místě:</h3>
+            Tomáš Koláčný<br />
+            <a href="mailto:tomas.kolacny@pirati.cz">tomas.kolacny@pirati.cz</a><br />
+            +420 736 661 244<br />
+            <br />
+            Karolína Sadílková<br />
+            <a href="mailto:karolina.sadilkova@pirati.cz">karolina.sadilkova@pirati.cz</a><br />
+            +420 776 505 557
+          </p>
+
+          <p>
+            Pro akreditované novináře bude připraveno zázemí a dle domluvy lze zajistit i rozhovory s konkrétními účastníky v určené časy.
+          </p>
+
+          <!--
+          <h2>Aktuality</h2>
+          <p>
+
+          </p>
+          -->
+
+          <h2>Ke stažení</h2>
+          <p>
+            <ul class="listWithImages">
+              <li>
+                <img src="images/logoAkce.png" alt="logo akce" /><br />
+                Logo akce <a href="images/cf2018.png">rastr</a>, <a href="images/cf2018.svg">vektor</a>
+              </li>
+              <li>
+                <img src="https://wiki.pirati.cz/_media/rp/pid/gman/plachta_bez_okraje.png?w=200&tok=a7daed" alt="logo Pirátské strany" /><br />
+                <a href="https://en.wikipedia.org/wiki/File:Piratpartiet.svg">Logo strany</a>
+              </li>
+              <li>
+                <img src="https://wiki.pirati.cz/_media/rp/pid/gman/vaclav_urban2/logotyp_cerna.jpg?w=200&tok=768de7" alt="logotyp Pirátské strany" /><br />
+                <a href="https://wiki.pirati.cz/mo/grafika/logotyp/start">Logotyp strany</a>
+              </li>
+              <li>
+                <img src="https://farm2.staticflickr.com/1683/25652636564_be3578e70b_q_d.jpg" alt="ilustrační fotografie" /><br />
+                <a href="https://farm2.staticflickr.com/1683/25652636564_eb8774a1de_o_d.jpg">Ilustrační fotografie</a>
+              </li>
+            </ul>
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="afterparty" class="popup">
+      <div class="inner">
+        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+
+        <div class="inner-content">
+          <h1 class="textLeft">Sobotní večírek</h1>
+          <p>
+            Co by to bylo za CFko bez tzv. AfterParty, že?
+          </p>
+
+          <div class="iframe">
+            <div id="mapa-afterparty" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
+          </div>
+
+          <p>
+            Místo: klub Fléda, Štefánikova 24, Brno<br />
+            Kdy: v sobotu 6.1.2018 od 19:00 do ??:??<br />
+            Program:<br />
+            19:30 – 21:00 Strange DJ<br />
+            21:00 – 22:20 DJ Noisecrashers<br />
+            22:20 – 23:00 *překvapení*<br />
+            23:00 - ??? Marra
+          </p>
+
+          <p>
+            Klub máme rezervován pro naší akci, ovšem po pirátsku bude přístupný také veřejnosti.<br />
+            Kapacita Flédy je cca 180 osob. K dispozici bude dostatek míst k sezení, šatna, dva bary, DJs i uzavřený prostor pro možnost případných jednání. Veškerou útratu si návštěvníci hradí ze svého. Vstup je samozřejmě zdarma.
+          </p>
+
+          <h2>Jak se dostanu na večírek z CF 2018</h2>
+          <p>
+            Autobusem č. 44 ze zastávky Křižkovského (asi 100 m od hotelu Voroněž) na Mendlovo nám., přestup na tramvaj č. 6 do zastávky Hrnčířská.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+  <div id="popupBlackBack" onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');"></div>
+
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-zapojse', {
+    center: [49.18549, 16.58540],
+    zoom: 15,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.18549, 16.58540]).addTo(mymap);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-zasedani', {
+    center: [49.18549, 16.58540],
+    zoom: 15,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.18549, 16.58540]).addTo(mymap);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-fleda', {
+    center: [49.21002, 16.60345],
+    zoom: 19,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.21002, 16.60345]).addTo(mymap);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-eleven', {
+    center: [49.19312, 16.60626],
+    zoom: 19,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.19312, 16.60626]).addTo(mymap);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-afterparty', {
+    center: [49.21002, 16.60345],
+    zoom: 19,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.21002, 16.60345]).addTo(mymap);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-preparty', {
+    center: [49.1980810, 16.5974587],
+    zoom: 19,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.1980810, 16.5974587]).addTo(mymap);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-10min', {
+    center: [49.18549, 16.58540],
+    zoom: 15,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.18549, 16.58540]).addTo(mymap).bindPopup("Hotel Voroněž - místo zasedání, restaurace");
+  L.marker([49.1858560, 16.5871965]).addTo(mymap).bindPopup("FairCafé Restaurant");
+  L.marker([49.1868292, 16.5864652]).addTo(mymap).bindPopup("U Kajmana");
+  L.marker([49.1869067, 16.5866465]).addTo(mymap).bindPopup("Satyam");
+  L.marker([49.1846890, 16.5798432]).addTo(mymap).bindPopup("Buffalo American Steakhouse");
+  L.marker([49.1841502, 16.5804366]).addTo(mymap).bindPopup("Prominent");
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-15min', {
+    center: [49.1881146, 16.5889083],
+    zoom: 15,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.18549, 16.58540]).addTo(mymap).bindPopup("Hotel Voroněž - místo zasedání");
+  L.marker([49.1896725, 16.5875013]).addTo(mymap).bindPopup("Pivní a vinný šenk Železná růže");
+  L.marker([49.1881146, 16.5889083]).addTo(mymap).bindPopup("Restaurant MITROVSKI");
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script type="text/javascript">
+  var mymap = L.map('mapa-20min', {
+    center: [49.1881752, 16.5913281],
+    zoom: 14,
+    scrollWheelZoom: false
+  });
+
+  L.marker([49.18549, 16.58540]).addTo(mymap).bindPopup("Hotel Voroněž - místo zasedání");
+  L.marker([49.1908317, 16.5927466]).addTo(mymap).bindPopup("Pivovarská Starobrno");
+  L.marker([49.1861111, 16.5954172]).addTo(mymap).bindPopup("Sharingham");
+  L.marker([49.1836187, 16.5865828]).addTo(mymap).bindPopup("Kamenka, Duck bar");
+
+  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+  	maxZoom: 18,
+  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(mymap);
+</script>
+
+<script>
+var url = new URL(window.location.href);
+var p = url.searchParams.get("p");
+console.log(p);
+
+$("#block_" + p).click();
+</script>
+  </body>
+</html>
