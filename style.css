@@ -1,13 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin-ext');
+
+
+@font-face{
+	font-family:'Bebas Neue Book';
+	src:url("/fonts/BebasNeue-Book.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal
+}
+@font-face{
+	font-family:'Bebas Neue';
+	src:url("/fonts/BebasNeue-Thin.ttf") format("truetype");
+	font-weight:100;
+	font-style:normal
+}
+@font-face{
+	font-family:'Bebas Neue';
+	src:url("/fonts/BebasNeue-Light.ttf") format("truetype");
+	font-weight:300;
+	font-style:normal
+}
+@font-face{
+	font-family:'Bebas Neue';
+	src:url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal
+}
+@font-face{
+	font-family:'Bebas Neue';
+	src:url("/fonts/BebasNeue-Bold.ttf") format("truetype");
+	font-weight:bold;
+	font-style:normal
+}
 
 /* Browser options */
 ::-moz-selection {
-  background:                 #60c;
+  /*background:                 #60c;*/
   color:                      #ffffff;
 }
 ::selection {
-  background:                 #60c;
+  /*background:                 #60c;*/
   color:                      #ffffff;
 }
 
@@ -15,7 +47,7 @@ html, body, jsAffectedContent {
   margin: 0;
   padding: 0;
   background: #ffffff;
-  font-family: 'Roboto', serif;
+  font-family: 'Roboto Condensed', serif;
   width: 100%;
   height: 100%;
 }
@@ -33,33 +65,33 @@ ul {
 
 h1 {
   font-size: 42pt;
-  color: #60c;
-  text-transform: uppercase;
-  /*font-family: 'Bree Serif', serif;*/
+    text-transform: uppercase;
+  font-family: 'Bebas Neue', serif;
 }
 
 h2 {
   font-size: 20pt;
   margin: 40px 0 20px 0;
   padding: 0;
-  /*font-family: 'Bree Serif', serif;*/
+  font-family: 'Bebas Neue Book', serif;
   text-transform: uppercase;
 }
 
 h3 {
   margin: 25px 0 6px 0;
   padding: 0;
-  /*font-family: 'Bree Serif', serif;*/
+  font-family: 'Bebas Neue Book', serif;
+
 }
 
 h4 {
   margin: 6px 0 6px 0;
   padding: 0;
-  /*font-family: 'Bree Serif', serif;*/
+    font-family: 'Bebas Neue Book', serif;
 }
 
 a:link, a:visited {
-  color: #60c;
+  /*color: #60c;*/
   text-decoration: underline;
   transition: all ease-in-out 0.5s;
 }
@@ -71,20 +103,46 @@ a:hover {
 }
 
 div.content {
+
   width: 1150px;
   margin: auto;
   font-weight: 300;
-  padding-bottom: 20px;
+ /* padding-bottom: 20px;*/
 }
 
-#topGraphic {
-  background: url("images/back1.jpg") no-repeat fixed;
-  background-size: cover;
+
+div.other_info {
+
+  width: 1150px;
+  margin: auto;
+  font-weight: 300;
+ /* padding-bottom: 20px;*/
+}
+
+/*.logo_banner_left {
+    background: url(images/top_logoLeft.png) no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    padding-left: 34px;
+    padding-top: 20px;
+    height: max-content;
+}
+.logo_banner_right {
+    background: url(images/top_logoRight.png) no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    padding-left: 34px;
+    padding-top: 20px;
+    height: max-content;
+    padding-right: 20px;
+}*/
+
+/*#topGraphic {
   background-position: 90% top;
   width: 100%;
   height: 100%;
   position: relative;
-}
+}*/
 
 #topGraphic div.whiteCover {
   background: #fff;
@@ -111,7 +169,7 @@ div.content {
 
 #buttonUnderLogo {
   position: absolute;
-  top: 680px;
+  top: 250px;
   text-align: center;
   left: 50%;
   margin-left: -150px;
@@ -126,12 +184,20 @@ div.content {
 }
 
 #about {
-  background: #fff;
-  padding: 30px 0 30px 0;
+  background: url('images/top_image.png') no-repeat;
+ /* background-size: contain;
+  padding: 30px 0 30px 0;*/
+  height: -moz-available;          /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    height: fill-available;
+    max-height: 720px;
+      background-position: center
+    /*height: inherit;*/
 }
 
+
 #about h1 {
-  color: #60c;
+  /*color: #60c;*/
   margin: 20px 0 10px 0;
   padding: 0;
 }
@@ -145,7 +211,7 @@ div.content {
 }
 
 #info {
-  background: url('images/25652636564_eb8774a1de_o.jpg') no-repeat fixed #eee;
+ /* background: url('images/25652636564_eb8774a1de_o.jpg') no-repeat fixed #eee;*/
   background-size: cover;
   background-position: center 70%;
   padding: 30px 0 30px 0;
@@ -164,7 +230,7 @@ div.content {
 
 #info div.whiteCover {
   background: #fff;
-  opacity: 0.7;
+ 
   width: 100%;
   min-height: 100%;
   top: 0;
@@ -176,6 +242,24 @@ div.content {
   text-align: center;
   position: relative;
 }
+
+.gear {
+ background: url('images/gear.png') no-repeat;
+  transition: all 0.2s ease-in-out;
+  background-size: contain;
+  padding: 5px;
+  }
+
+/*.gear:hover {
+ background: url('images/koloN.png') no-repeat ;
+  transition: all 0.2s ease-in-out;
+  width: 230px;
+  height: 230px;
+  opacity: 0.8;
+  padding: 5px;
+  }*/
+
+
 
 #info p {
   font-size: 16pt;
@@ -195,9 +279,10 @@ div.content {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  font-size: 20pt;
+  font-size: 21pt;
   transition: all 0.2s ease-in-out;
-  /*font-family: 'Bree Serif', serif;*/
+  font-family: 'Bebas Neue', serif;
+
   font-weight: 900;
   margin: 10px 10px 10px 10px;
 }
@@ -211,23 +296,23 @@ div.content {
 #info a:hover, #info a:hover span.textBlink {
   transition: all 0.2s ease-in-out;
   animation: none !important;
-  color: #fff !important;
+  /*color: #fff !important;*/
 }
 
 #info a div {
-  background: #fff;
   transition: all 0.2s ease-in-out;
   width: 230px;
   height: 230px;
-  opacity: 0.8;
+ 
   padding: 5px;
+
 }
 
-#info a:hover div {
+/*#info a:hover div {
   background: #60c;
   transition: all 0.2s ease-in-out;
   opacity: 0.8;
-}
+}*/
 
 #footer {
   background: #333333;
@@ -347,7 +432,7 @@ div.content {
   width: 100%;
   height: 100%;
   background: #fff;
-  border: 5px solid #60c;
+  border: 5px solid /*#60c*/;
 }
 
 .popup div.close {
@@ -397,14 +482,10 @@ div.content {
   margin-top: -250px;
 }
 
+
+
+
 @media screen and (min-resolution: 120dpi) {
-  #topGraphic div.logoContainer {
-    width: 500px;
-    margin: auto;
-    margin-left: -250px;
-    position: relative;
-    top: 60px;
-  }
 
   #buttonUnderLogo {
     position: relative;
@@ -413,13 +494,6 @@ div.content {
 }
 
 @media all and (max-height: 640px) and (min-width: 1200px) {
-  #topGraphic div.logoContainer {
-    width: 400px;
-    margin: auto;
-    margin-left: -200px;
-    position: relative;
-    top: 60px;
-  }
 
   #buttonUnderLogo {
     position: relative;
@@ -434,11 +508,7 @@ div.content {
 }
 
 @media all and (max-height: 540px) {
-  #topGraphic div.logoContainer {
-    position: absolute;
-    top: 60px !important;
-  }
-
+  
   #buttonUnderLogo {
     position: absolute;
     top: 90px !important;
@@ -446,10 +516,6 @@ div.content {
 }
 
 @media all and (max-height: 320px) {
-  #topGraphic div.logoContainer {
-    position: absolute;
-    top: 40px !important;
-  }
 
   #buttonUnderLogo {
     position: absolute;
@@ -531,14 +597,7 @@ div.content {
     display: inline;
   }
 
-  #topGraphic div.logoContainer {
-    width: 300px;
-    margin: auto;
-    margin-left: -150px;
-    position: relative;
-    top: 80px;
-  }
-
+ 
   #buttonUnderLogo {
     position: relative;
     top: 120px;
@@ -848,8 +907,7 @@ div.content {
     height: auto;
   }
 
-  #topGraphic div.logoContainer {
-    width: 200px;
+  #topGraphic {
     left: 50%;
     margin-left: -100px;
   }
