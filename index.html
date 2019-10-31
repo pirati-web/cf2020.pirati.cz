@@ -53,29 +53,29 @@
 
     <script>
     // Set the date we're counting down to
-    //var countDownDate = new Date("Jan 11, 2020 10:00:00").getTime();
+    var countDownDate = new Date("Jan 11, 2020 10:00:00").getTime();
 
     // Update the count down every 1 second
-    //var x = setInterval(function() {
+    var x = setInterval(function() {
 
       // Get todays date and time
-      //var now = new Date().getTime();
+      var now = new Date().getTime();
 
       // Find the distance between now an the count down date
-      //var distance = countDownDate - now;
+      var distance = countDownDate - now;
 
       // Time calculations for days, hours, minutes and seconds
-      //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
       // Display the result in the element with id="demo"
-      //document.getElementById("countdown").innerHTML = "Proběhne v Ostravě už za " + days + " dní!";
+     document.getElementById("countdown").innerHTML = "Proběhne v Ostravě už za " + days + " dní!";
 
       // If the count down is finished, write some text
-      //  if (distance < 0) {
-      //    clearInterval(x);
-      //    document.getElementById("countdown").innerHTML = "MULTIFUNKČNÍ AULA GONG, DOLNÍ VÍTKOVICE, OSTRAVA";
-      //  }
-      //}, 1000);
+        if (distance < 0) {
+         clearInterval(x);
+          document.getElementById("countdown").innerHTML = "MULTIFUNKČNÍ AULA GONG, DOLNÍ VÍTKOVICE, OSTRAVA";
+        }
+      }, 1000);
     </script>
 
 
@@ -84,22 +84,24 @@
 
   </head>
 
-  <body>
+  <body> 
     <a id="scroll" href="#topGraphic"><img src="images/backtotop.png" alt="back to top" /></a>
 
-    <div id="topGraphic">
-      <div class="whiteCover"></div>
-      <div class="logoContainer"><img src="images/splash.png" alt="" class="logo" /></div>
+	<div style="width: 100%"> 
+		<img src="images/banner.jpg" alt="banner" style=" width: 100%; height: auto;"/>
+	</div>
+	<div style="width: 100%"> 
+		<img src="images/top_image.png" alt="top_image" style=" width: 100%; height: auto;"/>
+	</div> 
 
       <div id="buttonUnderLogo" class="content">
-        <p></p>
-        <a href="#about"><img src="images/arrow.gif" alt="Posuň stránku níž" /></a>
+        <a href="#info"><img src="images/arrow.gif" alt="Posuň stránku níž" /></a>
       </div>
-    </div>
 
-    <div id="about">
-      <div class="content">
-        <h1>Celostátní fórum</h1>
+   <!--  <div id="about"></div> -->
+    
+    <div class="content" style="/*height: 500px;*/">
+       <h1>Celostátní fórum</h1>
         <p>
           Celostátní fórum Pirátské strany je nejvyšším orgánem strany a zasedání se podle možností účastní každý člen strany.<br />
           <br />
@@ -111,108 +113,125 @@
             <li>mimořádně přezkoumává pravomocné rozhodnutí jiného orgánu strany.</li>
           </ul>
           <div class="textRight smallerText italic"><a href="https://wiki.pirati.cz/cf">zdroj</a></div>
-        </p>
+        </p> 
       </div>
-    </div>
 
     <div id="info">
-      <div class="whiteCover"></div>
+      <!-- <div class="whiteCover"></div> -->
+      
       <div class="content">
-        <h1 class="textCenter">Informace k zasedání 10.-11. ledna 2020</h1>
-        <!--<h2 class="textCenter" id="countdown"></h2>-->
+        <h1 class="textCenter">Informace k zasedání 11.-12. ledna 2020</h1>
+        <h2 class="textCenter" id="countdown"></h2>
 
-        <a id="block_registrace" href="?p=registrace#info" onclick="javascript:$('#registrace').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
+       <!--  <a id="block_registrace" href="?p=registrace#info" onclick="javascript:$('#registrace').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div class="gear">
             <span>
-              Co po registraci?
+              Registuj se!
             </span>
           </div>
-        </a>
+        </a> -->
 
         <a id="block_zapojSe" href="?p=zapojSe#info" onclick="javascript:$('#zapojse').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
+          <div class="gear">
             <span>
-              Zapoj se (dobrovolníci)
+              Zapoj se!
             </span>
           </div>
         </a>
 
         <a id="block_preParty" href="?p=preParty#info" onclick="javascript:$('#preparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
+          <div class="gear">
             <span>
-              Páteční<br />večírek
+              Pirátské<br />pařby
             </span>
           </div>
         </a>
 
         <a id="block_ubytovani" href="?p=ubytovani#info" onclick="javascript:$('#ubytovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
+          <div class="gear">
             <span>
-              Kde přespím?
+              Kaj budu<br/>chrápat?
             </span>
           </div>
         </a>
 
         <a id="block_jakNaMisto" href="?p=jakNaMisto#info" onclick="javascript:$('#mapa').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
+          <div class="gear">
             <span>
-              Jak se dostanu<br />na místo?
+              Kudyma na<br />forům?
             </span>
           </div>
         </a>
 
-        <a id="block_program" href="?p=program#info" onclick="javascript:$('#program').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
+       <!--  <a id="block_program" href="https://forum.pirati.cz/viewtopic.php?f=477&t=48574">
+          <div class="gear">
             <span>
-              Program zasedání
+              Program<br/>  zasedání
             </span>
           </div>
         </a>
-
-        <a id="block_stream" href="?p=stream#info" onclick="javascript:$('#stream').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
-            <!--
+ -->
+       <!--  <a id="block_stream" href="?p=stream#info" onclick="javascript:$('#stream').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div class="gear">
+            
             <span class="textBlink">
-            -->
+           
             <span>
-              Živý přenos
+              Živý<br/> přenos
             </span>
           </div>
-        </a>
+        </a> -->
 
-        <a id="block_stravovani" href="?p=stravovani#info" onclick="javascript:$('#stravovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
-            <span>
-              Kde se najím?
+        <!-- <a id="block_stravovani" href="?p=stravovani#info" onclick="javascript:$('#stravovani').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div class="gear">
+            <span >
+              Kaj se<br/> najím?
             </span>
           </div>
-        </a>
+        </a> -->
 
-        <a id="block_media" href="?p=media#info" onclick="javascript:$('#media').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
+       <!--  <a id="block_media" href="?p=media#info" onclick="javascript:$('#media').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div class="gear">
             <span>
               Pro média
             </span>
           </div>
         </a>
-
-        <a id="block_afterParty" href="?p=afterParty#info" onclick="javascript:$('#afterparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
-          <div>
+ -->
+       <!--  <a id="block_afterParty" href="?p=afterParty#info" onclick="javascript:$('#afterparty').css('display', 'block');$('#popupBlackBack').css('display', 'block');window.dispatchEvent(new Event('resize'));">
+          <div class="gear">
             <span>
               Sobotní<br />večírek
             </span>
           </div>
-        </a>
+        </a> -->
 
       </div>
-    </div>
+ </div>
 
-    <div id="footer">
+		<div class="other_info">
+			<p>
+			<ul>
+				<li>Chci na fórum! - Registruj se(link na registraci)</li>
+				<li>Kde budu jíst - Na místě bude zajištěno obědové menu v
+					několika variantách včetně veganské. Cena je 200 Kč, bude se platit
+					v předstihu na základě požadavku v registračním formuláři.</li>
+				<li>Program zasedání - Diskutujeme na <a id="block_program" href="https://forum.pirati.cz/viewtopic.php?f=477&t=48574">fóru</a></li>
+				<li>Jsem novinář - Registrujte se zde (prolink na registrační
+					formulář - sekce pro novináře). Pro bližší informace kontaktujte <a
+					href="mailto:zuzana.klusova@pirati.cz">Zuzanu Klusovou </a>
+					(telefonní kontakt +420 737 480 813).
+				</li>
+			</ul>
+			</p>
+		</div>
+
+		<div id="footer">
       <div class="content">
         <a href="https://pirati.cz/"><img src="images/logo-pirati.png" alt="Pirátská strana - logo" /></a>
 
         <div class="floatRight">
-          <span class="copyleft">©</span>2017 <a href="https://pirati.cz/">Česká pirátská strana</a> - všechna práva vyhlazena<br />
+          <span class="copyleft">©</span>2019 <a href="https://pirati.cz/">Česká pirátská strana</a> - všechna práva vyhlazena<br />
           <br />
           zveřejněno pod licencí <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="external">Creative Commons</a>
           </div>
@@ -228,12 +247,9 @@
         <div class="inner-content">
           <h1 class="textLeft">Co po registraci?</h1>
           <p>
-            Pokud jste zaregistrován přes formulář,
-            pak si ráno před zasedáním vyzvednete svou jmenovku a další informace,
-            které jsou pro vás připraveny pěkně pohromadě.<br />
-            <br />
-            Nestihl/a jste se zaregistrovat a jste člen strany? Nevadí, i na to jsme připraveni!
-            Stačí přijít k pultíku, kde si registrovaní vyzvedávají jmenovky a zde se o vás postaráme.
+			Pokud jste zaregistrován přes formulář, pak si ráno před zasedáním vyzvednete svou jmenovku a další informace, které jsou pro vás připraveny pěkně pohromadě.
+			<br/>
+			Nestihl/a jste se zaregistrovat a jste člen strany? Nevadí, i na to jsme připraveni! Stačí přijít k pultíku, kde si registrovaní vyzvedávají jmenovky a zde se o vás postaráme.
           </p>
         </div>
       </div>
@@ -248,7 +264,9 @@
 
           <h2>Kam se nahlásit</h2>
           <p>
-            Vyplň <a href="https://ec.europa.eu/eusurvey/runner/6879c7c2-35cb-64b4-22e4-07a7da1dd0bf" rel="external">registrační formulář dobrovolníka</a> a my se Ti ozveme s bližšími informacemi. V případě jakýchkoliv dotazů ohledně tvé pomoci kontaktuj <a href="https://forum.pirati.cz/dvaidx-u11635/">Davida O.</a> (tel. 604221773, <a href="mailto:david@otoupalik.cz">david@otoupalik.cz</a>).
+            Vyplň <a href="https://ec.europa.eu/eusurvey/runner/6879c7c2-35cb-64b4-22e4-07a7da1dd0bf" rel="external">registrační formulář dobrovolníka</a>
+             a my se Ti ozveme s bližšími informacemi. V případě jakýchkoliv dotazů ohledně tvé pomoci kontaktuj 
+             	<a href="https://moravskoslezsky.pirati.cz/lide/veronika-murzynova/">Veroniku M.</a> (tel. 728 267 356, <a href="mailto:veronika.murzynova@pirati.cz">veronika.murzynova@pirati.cz</a>).
           </p>
 
           <h2>Koho hledáme</h2>
@@ -263,7 +281,7 @@
 
           <h2>Musím být k dispozici po celou dobu?</h2>
           <p>
-            Ne. Budeme rádi za každou pomoc. Největší nápor bude mezi 8:30 až 10:00 v sobotu na registraci. Pak už to zvládneme v menším počtu. Během dne určitě zvládneš pokec s kamarády nebo známými, tak aby sis CF 2018 taky mohl(a) užít.<br />
+            Ne. Budeme rádi za každou pomoc. Největší nápor bude mezi 8:30 až 10:00 v sobotu na registraci. Pak už to zvládneme v menším počtu. Během dne určitě zvládneš pokec s kamarády nebo známými, tak aby sis CF 2020 taky mohl(a) užít.<br />
           </p>
 
           <h2>Co za to získám?</h2>
@@ -273,13 +291,13 @@
 
           <h2>Adresa jednacího sálu</h2>
           <p>
-            Hotel Palcát<br />
-            9. května<br />
-            Tábor
+          	Multifunkční aula GONG <br/>
+			Ruská 2993, 703 00 Ostrava-Vítkovice
+
           </p>
           <div class="iframe">
             <div id="mapa-zapojse" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
-            <a href="https://www.openstreetmap.org/?mlat=49.18549&amp;mlon=16.58540#map=19/49.18549/16.58540" class="smallerText" rel="external">Zobrazit velkou mapu</a><br />&nbsp;
+            <a href="https://www.google.com/maps/place/GONG/@49.8190764,18.2773635,17z/data=!3m1!4b1!4m5!3m4!1s0x4713e34fc41f9221:0x27705b35e95cf48f!8m2!3d49.819073!4d18.2795522" class="smallerText" rel="external">Zobrazit velkou mapu</a><br />&nbsp;
           </div>
         </div>
       </div>
@@ -296,18 +314,35 @@
           </div>
 
           <p>
-            Místo: Zahrada Ambrosia, Údolní 37, Brno<br />
-            Kdy: v pátek 6.1.2018 od 19:00 do 00:00
+            Místo: BARRÁK MUSIC CLUB A Dock<br/>
+			Havlíčkovo nábřeží 28<br/>
+			70200 Ostrava<br/>
+
+            Kdy: v pátek 10.1.2019 od 17:00 do 00:00
           </p>
 
           <p>
-            Kavárnu máme rezervovanou celou, avšak její kapacitu ještě navýšíme, jelikož přímo pod ní se nachází Pirate Space Brno - základna brněnských Pirátů. V ní najde útočiště každý, jemuž nevadí kouř či nějaké ty škodlivé emise.
+           Klub máme rezervován pro naši akci, ovšem po pirátsku bude přístupný také veřejnosti.
+			Kapacita Barráku je cca 300 osob. K dispozici bude dostatek míst k sezení, bar a prostor pro trsání. Veškerou útratu si návštěvníci hradí ze svého. Vstup je samozřejmě zdarma.
+           
           </p>
 
           <h2>Jak se dostanu na večírek?</h2>
           <p>
-            Šalinou č. 4 směr Náměstí Míru a vystoupíte na zastávce <b>Obilní trh</b>.
+           <h3>Nejbližší MHD</h3>
+           <i>Ve spojích MHD lze jizdenku platit platební kartou</i><br/>
+             	<b>Tramvaj</b><br/> - (1,2,4,6,8,9,10,11,14,18)- Výstup na zastavce Elektra -  poté směr Masarykovo náměstí a nábřeží či Most Miloše Sýkory <br/>
+             					- (4,10,12,14)  Výstup na zastávce Výstaviště -  poté směr Masarykovo náměstí a nábřeží či Most Miloše Sýkory <br/>
+             	<b>Autobus/Trolejbus</b><br/> - (99,71,38,101,105,106,107,11,112,113)	Výstup na zastávce Most Miloše Sýkory - poté směr nábřeží <br/>			
           </p>
+          <h1 class="textLeft">AfterParty</h1>
+          <p style="padding-bottom: 20px;">
+          Nejlepší zprávou dne je, že na afterparty se nebudeš muset nikam přemisťovat! Hlavní zasedací den zakončíme stylově přímo v GONGu, kde vystoupí pirátští DJs a několik překvapení.
+          
+          </p>
+         
+          
+          
         </div>
       </div>
     </div>
@@ -318,71 +353,134 @@
 
         <div class="inner-content">
           <h1 class="textLeft">Kde přespím?</h1>
-          <p>
-            Veškeré ubytování si zajišťují účastníci CF sami a na své náklady.
-            Nabízet a poptávat couchsurfing je možné přes <a href="http://bit.ly/2zQkTZd">tento formulář</a>.
-          </p>
+          
+          Prosím využijte jeden z níže uvedených hotelů, které máme zarezervované. Máme domluveny množstevní slevy, které platí do 30. listopadu. Poté budou volné pokoje uvolněny a slevy zrušeny!
 
-          <p>
-            Máme rezervovaných 49 lůžek v <a href="http://hostelfleda.com/cz/uvod/" rel="external">
-              hostelu Fléda</a> (místo konání afterparty) a 50 lůžek v <a href="http://www.hosteleleven.com/cz" rel="external">hostelu Eleven</a> (centrum Brna). Pokoje mají sdílené soc. zázemí a kuchyňky. Jedná se o 2 až 6ti lůžkové pokoje. V obou hostelech je domluvená jednotná zvýhodněná cena 270 Kč/os/noc, včetně všech poplatků.
-          </p>
+<h2> <a href="http://hotelvp1.cz">Hotel VP1</a> </h2> <i>(rezervován pro Piráty do 31. listopadu)</i>
+	<table>
+		<tr>
+			<td style="vertical-align: top;"><b>Poloha:</b> </td>
+			<td>v docházkové vzdálenosti - hned vedle Gongu</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Ruská 2946, Vítkovice, 703 00 Ostrava</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Rezervace:</b> </td>
+			<td>emailem na hotelvp1@vitkovice.cz nebo formulářem
+				v případě dotazů volejte na +420 724 539 719; +420 595 955 244
+				Máme slevu! Při rezervaci do předmětu emailu nebo zprávy uveďte heslo: PIRATI
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Cena:</b> </td>
+			<td>Pokoj s TV jednolůžkový 	820 Kč<br>
+				Pokoj s TV dvoulůžkový 	900 Kč<br>
+				Pokoj bez TV jednolůžkový 	720 Kč<br>
+				Pokoj bez TV dvoulůžkový 	800 Kč<br>
+				Snídaně si lze dokoupit za 	105,- Kč /osoba/den<br></td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Bezbariérovost:</b> </td>
+			<td>částečně. Je třeba překonat dva schody u vchodu a pak několik schodů k výtahu.</td>
+		</tr>
+	</table>
+	
+	<h2> <a href="https://www.harmonyclub.cz/hotel-ostrava-ubytovani.html">Hotel Harmony</a> </h2> <i>(rezervován pro Piráty do 31. listopadu)</i>
+	<table>
+		<tr>
+			<td style="vertical-align: top;"><b>Poloha:</b> </td>
+			<td>2 km (25 min.) chůze od GONGU, MHD tramvají z Gongu (zastávka Dolní  
+                        Vítkovice) na zastávku Dům Energetiky (kousek od hotelu).<br>
+                        </td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>28. října 170, 709 00 Ostrava - Mariánské Hory</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Rezervace:</b> </td>
+			<td><a href="https://www.secure-hotel-booking.com/smart/Harmony-Club-Hotel/2Q7L/cs/">rezervačním formulářem</a><br>
+				v případě dotazů volejte na  +420 596 652 111, 731 142 503<br>
+				Máme slevu! Při rezervaci do kolonky Promo kód uveďte heslo: PIRATI
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Cena:</b> </td>
+			<td>Jednolůžkový pokoj starší vč.snídaně	1200,- Kč<br>
+				Jednolůžkový pokoj nový vč. snídaně	1400,- Kč<br>
+				Dvoulůžkový pokoj starší vč.snídaně		1700,- Kč<br>
+				Dvoulůžkový pokoj nový vč. snídaně		1900,- Kč </td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Bezbariérovost:</b> </td>
+			<td>ano, hotel má výtah a je bezbariérový.</td>
+		</tr>
+	</table>
 
-          <p>
-            Pokud máte zájem o ubytování v jednom z hostelů,
-            zapište se do <a href="https://docs.google.com/spreadsheets/d/1FQGgleQntOROauVvkKT8YW4xrpF7UEYrnUzQqQeE1Ck/edit?usp=sharing">této online tabulky</a> <span class="smallestText">(odkaz vede na nesvobodnou službu)</span> (každý hostel má svůj list), následně vám na e-mail přijde potvrzení rezervace se všemi podrobnostmi.
-          </p>
-
-          <h2>Jak se dostanu do hostelu Fléda</h2>
-          <div class="iframe">
-            <div id="mapa-fleda" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
-          </div>
-          <p>
-            <h3>Přijedu autem</h3>
-            zadejte do navigace Štefaníkova 24. Parkování v okolí hostelu.<br />
-            <h3>Přijedu autobusem</h3>
-            z ústředního autobusového nádraží se vydejte do OC Vaňkovka, tím projděte a dostanete se k Tesco. Pokračujte stále rovně do podchodu, ze kterého vystupte k tramvajím směr Řečkovice. Dále tramvaji č. 1 směr Řečkovice, zastávka Hrnčířská.<br />
-            <h3>Přijedu žlutým nebo zeleným autobusem</h3>
-            Z autobusového nádraží Grand se otočte směrem na silnici s kolejemi pro MHD. Běžte doleva podél této silnice a dojdete k vlakovému nádraží. Dále viz „přijedu vlakem“.<br />
-            <h3>Přijedu vlakem</h3>
-            z hl. nádraží tramvaj č. 1 směr Řečkovice, zastávka Hrnčířská.
-          </p>
-
-          <p>
-            Na místo konání CF 2018 jeďte tramvaji č. 4 na Mendlovo nám. Přestupte na autobus č. 84 vystupte na zastávce Křížkovského a pokračujte ve stejném směru pěšky cca 100 m. Po levé straně se nachází hotel Voroněž.
-          </p>
-
-          <h2>Jak se dostanu do hostelu Eleven (Dominikánska 11, přístup až k hostelu pouze pěšky)</h2>
-          <div class="iframe">
-            <div id="mapa-eleven" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
-          </div>
-          <p>
-            <h3>Přijedu autem</h3>
-            zadejte do navigace ul. Husova a zaparkujte v jejím okolí nebo v placeném parkovacím domě Domini park – vjezd vedle hotelu International. Dále pěšky cca 5 min.. K hostelu se autem dostat nedá.<br />
-            <h3>Přijedu vlakem</h3>
-            pěšky směr centrum cca 10 min. nebo tramvaji č. 4 a 12 do zastávky Šilingrovo nám. A dále pěšky cca 3 min. doprava od směru jízdy tramvaje.<br />
-            <h3>Přijedu autobusem</h3>
-            z ústředního autobusového nádraží se vydejte do OC Vaňkovka, tím projděte a dostanete se k Tesco. Pokračujte stále rovně do podchodu, ze kterého vystupte k tramvajím. Dále viz. „přijedu vlakem“.<br />
-            <h3>Přijedu žlutým nebo zeleným autobusem</h3>
-            Z autobusového nádraží Grand se otočte směrem na silnici s kolejemi pro MHD. Běžte doleva podél této silnice a dojdete k vlakovému nádraží. Dále viz „přijedu vlakem“.
-          </p>
-
-          <p>
-            Na místo konání CF 2018 jeďte tramvaji č. 6 z Šilingrového nám. na Mendlovo nám. Přestupte na autobus č. 84, vystupte na zastávce Křížkovského a pokračujte ve stejném směru pěšky cca 100 m. Po levé straně se nachází hotel Voroněž.
-          </p>
-
-          <h2>Ubytování v místě konání CF</h2>
-          <p>
-            <a href="http://www.oreahotelvoronez.cz/cz/rezervace/" rel="external">Orea Hotel Voroněž</a> – od 1.300 Kč za 2-lůžkový pokoj a noc
-          </p>
-
-          <p>
-            Dalších možností ubytování je v Táboře spousta, výběr je na vás.
-          </p>
+	<h2> <a href="https://www.hotelveronika.cz">Hotel Veronika</a> </h2> <i>(rezervován pro Piráty do 31. listopadu)</i>
+	<table>
+		<tr>
+			<td style="vertical-align: top;"><b>Poloha:</b> </td>
+			<td>1,1 km (13 min.) chůze od GONGU, MHD autobusem ze zastávka.<br>
+                </td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Mírové nám. 519/3, 703 00 Ostrava-Vítkovice</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Rezervace:</b> </td>
+			<td>Emailem na recepce@hotelveronika.cz, v případě dotazů volejte na  +420 597 582 100<br>
+				Máme slevu! Při rezervaci do předmětu emailu nebo zprávy uveďte heslo: PIRATI
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Cena:</b> </td>
+			<td> jednolůžkový pokoj - 666,- Kč/den osoba<br>	
+ 				dvoulůžkový pokoj - 423,- Kč/osoba/den<br>
+  				čtyřlůžkový pokoj - 374,-Kč/osoba/den<br>
+				Snídaně si lze dokoupit za 110,- Kč /osoba/den.</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Bezbariérovost:</b> </td>
+			<td>ne, hotel je bez výtahu. .</td>
+		</tr>
+	</table>
+	<h2> <a href="https://www.mercureostrava.cz">Hotel MERCURE Ostrava Center</a> </h2> <i>( částečně rezervován pro Piráty do 31. listopadu)</i>
+	<table style="padding-bottom: 20px;">
+		<tr>
+			<td style="vertical-align: top;"><b>Poloha:</b> </td>
+			<td>Dostupný MHD s přestupem cca 15 minut, zastávka Husův sad.<br>
+                </td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Českobratrská 18/1742</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Rezervace:</b> </td>
+			<td>Emailem na H7051@accor.com nebo formulářem v případě dotazů volejte na  +420 595 606 600<br>
+				Máme slevu! Při rezervaci do předmětu emailu nebo zprávy uveďte heslo: PIRATI
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Cena:</b> </td>
+			<td>včetně snídaně jednolůžkový pokoj Standard - 1500 Kč/ noc<br>	
+ 				včetně snídaně dvoulůžkový pokoj Standard - 1770 Kč/ noc<br>
+		</tr>
+		<tr>
+			<td style="vertical-align: top;"><b>Bezbariérovost:</b> </td>
+			<td>Bezbariérovost: ano, hotel má výtah a je bezbariérový.</td>
+		</tr>
+	</table>
         </div>
       </div>
     </div>
-
+    
+    
+    
     <div id="mapa" class="popup">
       <div class="inner" onclick="javascript:null;">
         <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
@@ -390,37 +488,35 @@
         <div class="inner-content">
           <h1 class="textLeft">Jak se dostanu na místo?</h1>
 
-          <h2>Adresa jednacího sálu</h2>
+           <h2>Adresa jednacího sálu</h2>
           <p>
-            Hotel Palcát<br />
-            9. května<br />
-            Tábor
+          	Multifunkční aula GONG <br/>
+			Ruská 2993, 703 00 Ostrava-Vítkovice
           </p>
           <div class="iframe">
             <div id="mapa-zasedani" class="osm-map" onload="javascript:$('osm-map').css('width','100%');"></div>
-            <a href="https://www.openstreetmap.org/?mlat=49.18549&amp;mlon=16.58540#map=19/49.18549/16.58540" class="smallerText" rel="external">Zobrazit velkou mapu</a>
+            <a href="https://www.openstreetmap.org/?mlat=49.8189&amp;mlon=18.2794#map=16/49.8189/18.2794" class="smallerText" rel="external">Zobrazit velkou mapu</a>
           </div>
 
           <h2>Přijedu autem</h2>
           <p>
-            Do navigace zadejte výše uvedenou adresu a zaparkujte na parkovišti přímo u hotelu.
+           Do navigace zadejte adresu jednacího sálu - nejbližší parkoviště je přímo před GONGem a také před hotelem VP1. Další parkoviště se nachází cca 5 minut chůze od GONGu za Velkým světem techniky.
           </p>
 
           <h2>Přijedu autobusem</h2>
           <p>
-            Na Ústředním autobusovém nádraží se otočte čelem k nástupištnímu označníku a tímto směrem přejděte na protější chodník, po kterém běžte doprava k přechodu přes silnici. Přejděte přes ni směrem ke vchodu do nákupního centra Vaňkovka, poté se otočte doleva a přejděte silnici znovu. Dojděte na zastávku autobusu a nastupte do okružní linky č. 84.
-            Před nástupem do vozu si pořiďte jízdenku (viz níže, cesta na zasedání trvá do 20 minut).<br />
-            Vystupte na zastávce <b>Křížkovského</b> a pokračujte ve stejném směru pěšky cca 100 m. Po levé straně se nachází hotel Voroněž.<br />
-            <a href="https://www.google.cz/maps/dir/Brno+%C3%9AAN+Zvona%C5%99ka,+Brno-Brno-st%C5%99ed/Orea+Hotel+Voron%C4%9B%C5%BE,+K%C5%99%C3%AD%C5%BEkovsk%C3%A9ho+458,+Brno/@49.1878729,16.5919366,15z/am=t/data=!4m18!4m17!1m5!1m1!1s0x471294fe156c75b9:0x249378ee9740e62b!2m2!1d16.6166616!2d49.1858157!1m5!1m1!1s0x471295b5b300c387:0x4146a6531d3b40d3!2m2!1d16.585073!2d49.185861!2m3!6e1!7e2!8j1515231000!3e3" class="smallerText" rel="external">Zobrazit mapu trasy</a> <span class="smallestText">(odkaz vede na nesvobodné mapy)</span>
+           Z Hlavního nádraží tramvají č. 1 nebo 2 do zastávky Dolní Vítkovice (15 minut), ze zastávky je to 450 m do GONGu. Spojení z jiných nádraží vám spolehlivě najde Moje DPO!
+<br />
+            <a href="https://www.google.com/maps/place/GONG/@49.8190764,18.2773635,17z/data=!3m1!4b1!4m5!3m4!1s0x4713e34fc41f9221:0x27705b35e95cf48f!8m2!3d49.819073!4d18.2795522" class="smallerText" rel="external">Zobrazit mapu trasy</a> <span class="smallestText">(odkaz vede na nesvobodné mapy)</span>
           </p>
 
-          <h2>Přijedu žlutým nebo zeleným autobusem</h2>
+          <!-- <h2>Přijedu žlutým nebo zeleným autobusem</h2>
           <p>
             Z autobusového nádraží Grand se otočte směrem na silnici s kolejemi pro MHD. Běžte doleva podél této silnice a dojdete k vlakovému nádraží.<br />
             <i>Dále viz „přijedu vlakem“.</i>
-          </p>
+          </p> -->
 
-          <h2>Přijedu vlakem</h2>
+         <!--  <h2>Přijedu vlakem</h2>
           <p>
             Vyjděte z vlakového nádraží a uvidíte 4 koleje šalin MHD. Jsou značené, tudíž běžte na 1. kolej.<br />
             Před nástupem do vozu si pořiďte jízdenku (viz níže, cesta na zasedání trvá asi 10 minut) a nastupte na šalinu č. 1 směr Bystrc Ečerova, která vás doveze na zastávku <b>Výstaviště - hlavní vstup</b>.<br />
@@ -447,7 +543,7 @@
               <li>15 minutová jízdenka stojí 20 Kč</li>
               <li>60 minutová jízdenka stojí 25 Kč</li>
               <li>24 hodin jízdenka stojí 90 Kč a o víkendu na ni mohou jet až 2 dospělí a 3 děti</li>
-            </ul>
+            </ul> -->
         </div>
       </div>
     </div>
@@ -461,7 +557,9 @@
 
           <p>
             <h2>Sobota:</h2>
-            A 10.00-11.00 - Zahájení; Projevy kandidátů na předsedu strany, otázky<br /><br />
+            Sestavení pořadu zasedání celostátního fóra 11. ledna v Ostravě se debatuje na foru viz <a href="https://forum.pirati.cz/viewtopic.php?f=477&t=48574">odkaz na forum</a>
+
+           <!--  A 10.00-11.00 - Zahájení; Projevy kandidátů na předsedu strany, otázky<br /><br />
             B 11.00-12.00 - 1. kolo volby předsedy (hlasování); Změny stanov 1 (rozprava)<br /><br />
             C 12.00-13.00 - Vyhlášení výsledků 1. kola volby předsedy (v případě jediného kandidáta bude hlasování pokračovat až do 13.00), případné 2. kolo volby předsedy (hlasování); Oběd<br /><br />
             D 13.00-14.00 - Vyhlášení výsledků volby předsedy; Projevy kandidátů na místopředsedy, otázky<br /><br />
@@ -469,23 +567,23 @@
             F 15.00-16.00 - 1 kolo volby místopředsedů (hlasování); Změny stanov 2 (rozprava)<br /><br />
             G 16.00-17.00 - Vyhlášení výsledků 1. kola volby místopředsedů, 2. kolo volby místopředsedů (hlasování); 1. kolo hlasování o změnách stanov; Informace o senátních volbách 2018; Zpráva předsedy o stavu strany<br /><br />
             H 17.00-18.00 - Vyhlášení výsledků volby místopředsedů; případné 2. kolo hlasování o změnách stanov; projednání principů důležitých pro upgrade strany (zejména pozice vedoucích odborů - politická garance vs. zaměstnávání a servisně-administrativní funkce), jejich případné doplnění (schvalování po zasedáníi online) - projednání pomocí participativních nástrojů (např. lístečkování); debata o dosavadním upgradu, organizačním schématu strany, pozici a podpoře odborných garantů a jejich spolupráci s poslanci zodpovědnými za danou problematiku ve sněmovně a celou pracovní skupinou a 2) zadání výběrového řízení - probrání výsledné vize pro upgrade, hlasování opět po zasedání online + nastavení skupin a workshopů na neděli (Olga)<br />
-
+ -->
             <h2>Neděle:</h2>
-            workshopy viz pad <a href="https://pad.pirati.cz/p/cf2018nedele">https://pad.pirati.cz/p/cf2018nedele</a>
+          <!--   workshopy viz pad <a href="https://pad.pirati.cz/p/cf2018nedele">https://pad.pirati.cz/p/cf2018nedele</a> -->
           </p>
         </div>
       </div>
     </div>
 
-    <div id="stream" class="popup">
+    <!-- <div id="stream" class="popup">
       <div class="inner">
         <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
 
         <div class="inner-content">
           <h1 class="textLeft">Živý přenos</h1>
           <div class="textCenter">
-            <!--<iframe src="https://www.youtube-nocookie.com/embed/3LfFG84fgdk?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            -->
+            <iframe src="https://www.youtube-nocookie.com/embed/3LfFG84fgdk?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+           
             <img src="images/working.png" alt="Děláme na tom!" />
             <p>
               Informace doplníme co nejdříve.
@@ -494,11 +592,13 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div id="stravovani" class="popup">
       <div class="inner">
-        <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
+      <h1 class="textLeft">Kde se najím?</h1>
+      <p>Na místě bude zajištěno obědové menu v několika variantách včetně veganské. Cena je 200 Kč, bude se platit v předstihu na základě požadavku v registračním formuláři.</p>
+      <!--   <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
 
         <div class="inner-content">
           <h1 class="textLeft">Kde se najím?</h1>
@@ -607,7 +707,7 @@
                 <li>Kamenná čtvrť 10c</li>
                 <li>Otevírací doba: 17.00 – 02.00 (Po-Ne)</li>
                 <li class="italic">Patrikovo nej - NEJatmoška</li>
-              </ul>
+              </ul> -->
 
         </div>
       </div>
@@ -620,31 +720,13 @@
         <div class="inner-content">
           <h1 class="textLeft">Pro média</h1>
           <p>
-            V případě zájmu o účast na zasedání Celostátního fóra Pirátské strany, které se uskuteční v lednu 2018 v Brně, je nutné provést akreditaci, a to <b>nejpozději do 3. 1. 2018 18:00</b>. Bez ní nebude vstup umožněn.
+          Registrujte se zde (prolink na registrační formulář - sekce pro novináře). Pro bližší informace kontaktujte 
+          <a href="mailto:zuzana.klusova@pirati.cz">Zuzanu Klusovou </a> (telefonní kontakt +420 737 480 813).
           </p>
 
           <p>
 
-            <h3>Akreditace</h3>
-            Jakub Dušánek<br />
-            <a href="mailto:jakub.dusanek@pirati.cz">jakub.dusanek@pirati.cz</a><br />
-            +420 770 138 763
-
-            <h3>Kontakt v Brně, technické obhlídky místa</h3>
-            Miroslav Bárta<br />
-            <a href="mailto:miroslav.barta@pirati.cz">miroslav.barta@pirati.cz</a><br />
-            +420 730 896 278
-
-            <h3>Kontaktní osoba pro média na místě:</h3>
-            Tomáš Koláčný<br />
-            <a href="mailto:tomas.kolacny@pirati.cz">tomas.kolacny@pirati.cz</a><br />
-            +420 736 661 244<br />
-            <br />
-            Karolína Sadílková<br />
-            <a href="mailto:karolina.sadilkova@pirati.cz">karolina.sadilkova@pirati.cz</a><br />
-            +420 776 505 557
-          </p>
-
+            
           <p>
             Pro akreditované novináře bude připraveno zázemí a dle domluvy lze zajistit i rozhovory s konkrétními účastníky v určené časy.
           </p>
@@ -656,7 +738,7 @@
           </p>
           -->
 
-          <h2>Ke stažení</h2>
+         <!--  <h2>Ke stažení</h2>
           <p>
             <ul class="listWithImages">
               <li>
@@ -676,13 +758,13 @@
                 <a href="https://farm2.staticflickr.com/1683/25652636564_eb8774a1de_o_d.jpg">Ilustrační fotografie</a>
               </li>
             </ul>
-          </p>
+          </p> -->
 
         </div>
       </div>
     </div>
 
-    <div id="afterparty" class="popup">
+   <!--  <div id="afterparty" class="popup">
       <div class="inner">
         <div onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');" class="close"></div>
 
@@ -718,81 +800,21 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
   <div id="popupBlackBack" onclick="javascript:$('.popup').css('display', 'none');$('#popupBlackBack').css('display', 'none');"></div>
 
 
-<script type="text/javascript">
-  var mymap = L.map('mapa-zapojse', {
-    center: [49.18549, 16.58540],
-    zoom: 15,
-    scrollWheelZoom: false
-  });
 
-  L.marker([49.18549, 16.58540]).addTo(mymap);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-  	maxZoom: 18,
-  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(mymap);
-</script>
 
 <script type="text/javascript">
   var mymap = L.map('mapa-zasedani', {
-    center: [49.18549, 16.58540],
-    zoom: 15,
-    scrollWheelZoom: false
-  });
-
-  L.marker([49.18549, 16.58540]).addTo(mymap);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-  	maxZoom: 18,
-  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(mymap);
-</script>
-
-<script type="text/javascript">
-  var mymap = L.map('mapa-fleda', {
-    center: [49.21002, 16.60345],
-    zoom: 19,
-    scrollWheelZoom: false
-  });
-
-  L.marker([49.21002, 16.60345]).addTo(mymap);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-  	maxZoom: 18,
-  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(mymap);
-</script>
-
-<script type="text/javascript">
-  var mymap = L.map('mapa-eleven', {
-    center: [49.19312, 16.60626],
-    zoom: 19,
-    scrollWheelZoom: false
-  });
-
-  L.marker([49.19312, 16.60626]).addTo(mymap);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-  	maxZoom: 18,
-  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(mymap);
-</script>
-
-<script type="text/javascript">
-  var mymap = L.map('mapa-afterparty', {
-    center: [49.21002, 16.60345],
-    zoom: 19,
-    scrollWheelZoom: false
-  });
-
-  L.marker([49.21002, 16.60345]).addTo(mymap);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+      center: [49.8189, 18.2795],
+      zoom: 16,
+      scrollWheelZoom: false
+    });
+    L.marker( [49.8189, 18.2795]).addTo(mymap);
+  	L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
   	maxZoom: 18,
   	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(mymap);
@@ -800,67 +822,11 @@
 
 <script type="text/javascript">
   var mymap = L.map('mapa-preparty', {
-    center: [49.1980810, 16.5974587],
+    center: [49.83628,18.29601],
     zoom: 19,
     scrollWheelZoom: false
   });
-
-  L.marker([49.1980810, 16.5974587]).addTo(mymap);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-  	maxZoom: 18,
-  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(mymap);
-</script>
-
-<script type="text/javascript">
-  var mymap = L.map('mapa-10min', {
-    center: [49.18549, 16.58540],
-    zoom: 15,
-    scrollWheelZoom: false
-  });
-
-  L.marker([49.18549, 16.58540]).addTo(mymap).bindPopup("Hotel Voroněž - místo zasedání, restaurace");
-  L.marker([49.1858560, 16.5871965]).addTo(mymap).bindPopup("FairCafé Restaurant");
-  L.marker([49.1868292, 16.5864652]).addTo(mymap).bindPopup("U Kajmana");
-  L.marker([49.1869067, 16.5866465]).addTo(mymap).bindPopup("Satyam");
-  L.marker([49.1846890, 16.5798432]).addTo(mymap).bindPopup("Buffalo American Steakhouse");
-  L.marker([49.1841502, 16.5804366]).addTo(mymap).bindPopup("Prominent");
-
-  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-  	maxZoom: 18,
-  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(mymap);
-</script>
-
-<script type="text/javascript">
-  var mymap = L.map('mapa-15min', {
-    center: [49.1881146, 16.5889083],
-    zoom: 15,
-    scrollWheelZoom: false
-  });
-
-  L.marker([49.18549, 16.58540]).addTo(mymap).bindPopup("Hotel Voroněž - místo zasedání");
-  L.marker([49.1896725, 16.5875013]).addTo(mymap).bindPopup("Pivní a vinný šenk Železná růže");
-  L.marker([49.1881146, 16.5889083]).addTo(mymap).bindPopup("Restaurant MITROVSKI");
-
-  L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-  	maxZoom: 18,
-  	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(mymap);
-</script>
-
-<script type="text/javascript">
-  var mymap = L.map('mapa-20min', {
-    center: [49.1881752, 16.5913281],
-    zoom: 14,
-    scrollWheelZoom: false
-  });
-
-  L.marker([49.18549, 16.58540]).addTo(mymap).bindPopup("Hotel Voroněž - místo zasedání");
-  L.marker([49.1908317, 16.5927466]).addTo(mymap).bindPopup("Pivovarská Starobrno");
-  L.marker([49.1861111, 16.5954172]).addTo(mymap).bindPopup("Sharingham");
-  L.marker([49.1836187, 16.5865828]).addTo(mymap).bindPopup("Kamenka, Duck bar");
+  L.marker([49.83628,18.29601]).addTo(mymap);
 
   L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
   	maxZoom: 18,
