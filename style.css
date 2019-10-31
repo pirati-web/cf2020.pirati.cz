@@ -4,31 +4,31 @@
 
 @font-face{
 	font-family:'Bebas Neue Book';
-	src:url("/fonts/BebasNeue-Book.ttf") format("truetype");
+	src:url("fonts/BebasNeue-Book.ttf") format("truetype");
 	font-weight:normal;
 	font-style:normal
 }
 @font-face{
 	font-family:'Bebas Neue';
-	src:url("/fonts/BebasNeue-Thin.ttf") format("truetype");
+	src:url("fonts/BebasNeue-Thin.ttf") format("truetype");
 	font-weight:100;
 	font-style:normal
 }
 @font-face{
 	font-family:'Bebas Neue';
-	src:url("/fonts/BebasNeue-Light.ttf") format("truetype");
+	src:url("fonts/BebasNeue-Light.ttf") format("truetype");
 	font-weight:300;
 	font-style:normal
 }
 @font-face{
 	font-family:'Bebas Neue';
-	src:url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+	src:url("fonts/BebasNeue-Regular.ttf") format("truetype");
 	font-weight:normal;
 	font-style:normal
 }
 @font-face{
 	font-family:'Bebas Neue';
-	src:url("/fonts/BebasNeue-Bold.ttf") format("truetype");
+	src:url("fonts/BebasNeue-Bold.ttf") format("truetype");
 	font-weight:bold;
 	font-style:normal
 }
