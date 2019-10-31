@@ -116,6 +116,7 @@ div.other_info {
   width: 100%;
   margin: auto;
   font-weight: 300;
+	max-width: 1000px;
  /* padding-bottom: 20px;*/
 }
 
